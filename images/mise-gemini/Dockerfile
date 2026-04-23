@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM mcr.microsoft.com/devcontainers/base:ubuntu
 
 RUN apt-get update  \
     && apt-get -y --no-install-recommends install  \
@@ -21,6 +21,3 @@ RUN mise use -g npm:@google/gemini-cli
 
 # remove caches
 RUN mise cache clean
-
-# TODO:ユーザ作成
-
